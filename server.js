@@ -6,7 +6,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://jamboard-realtime.herokuapp.com/", // TODO: Ganti jadi URL react-mu
+    origin: "http://localhost:3000", // TODO: Ganti jadi URL react-mu
     methods: ["GET", "POST"],
   },
 });
@@ -24,7 +24,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3000, () => {
-    console.log("Server is on", "Listening on port 3000");
+server.listen(8000, () => {
+    console.log("Server is on", "Listening on port 8000");
 });
   
