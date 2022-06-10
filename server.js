@@ -8,6 +8,7 @@ const port = process.env.PORT || 8000;
 const io = new Server(server, {
   cors: {
     // origin: "http://localhost:3000", // TODO: Ganti jadi URL react-mu
+    origin: "https://jamboard-realtime.herokuapp.com/",
     methods: ["GET", "POST"],
   },
 });
