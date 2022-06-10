@@ -3,6 +3,7 @@ const { Server } = require("socket.io");
 const app = require("./app");
 
 const server = http.createServer(app);
+const port = process.env.PORT || 8000;
 
 const io = new Server(server, {
   cors: {
@@ -24,7 +25,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(8000, () => {
-    console.log("Server is on", "Listening on port 8000");
+server.listen(port, () => {
+    console.log(`Server is on, Listening on port ${port}`);
 });
   
